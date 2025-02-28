@@ -4,8 +4,8 @@ title: 'OptiPlex 5050 - Home Server'
 itemDate: 2023-07-01
 description: 'My unRAID based home server / NAS solution.'
 image:
-    url: '' 
-    alt: ''
+    url: '../../src/images/5050.png' 
+    alt: 'Dell OptiPlex 5050'
 ---
 ____________________________________________________________________________________________
 This server comes in handy for accessing my data within and outside of my network. It was just set up a month or so ago as of writing this, and I hope to
@@ -18,7 +18,7 @@ Hardware Configuration:
 <li>Model: Dell OptiPlex 5050 MT
 <li>CPU: Intel Core i5-7500 3.40GHz
 <li>RAM: 32GB TEAMGROUP DDR4-3200 + 8GB SKhynix DDR4-2666
-<li>UPS: APC Back-UPS BN450M (monitored via USB)
+<li>UPS: APC Back-UPS BE600M1 (monitored via USB)
 </ul>
 
 Storage Configuration:
