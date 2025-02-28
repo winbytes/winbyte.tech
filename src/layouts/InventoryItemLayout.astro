@@ -7,10 +7,7 @@ const { frontmatter } = Astro.props;
   <p>
     📅 Date Added: {frontmatter.itemDate.slice(0, 10)}
   </p>
-  {/*
   <img src={frontmatter.image.url} width="280" alt={frontmatter.image.alt} />
-    image embed to be implemented
-  */}
   <p><em>{frontmatter.description}</em></p>
   <slot />
 </BasicLayout>
