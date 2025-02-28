@@ -23,4 +23,4 @@ Run:
   - [Astro](https://astro.build/)
   - [Tailwind CSS](https://tailwindcss.com/)
 
-© 2023 coriixyz
+© 2023-2025 coriixyz
