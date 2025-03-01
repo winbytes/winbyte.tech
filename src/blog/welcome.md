@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/BlogPostLayout.astro
 title: 'Welcome to the blog!'
 postDate: 2023-05-18
 description: 'This site is all-new, thanks for checking out the first blog post!'

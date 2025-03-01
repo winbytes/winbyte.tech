@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/BlogPostLayout.astro
 title: 'Update: Username / Domain Change'
 postDate: 2023-06-12
 description: 'Just a little update on the name change...'
