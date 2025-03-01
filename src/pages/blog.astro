@@ -1,11 +1,12 @@
 ---
 import '../styles/global.css';
 import BaseLayout from "../layouts/BaseLayout.astro";
-import BlogPost from '../components/BlogPost.astro';
+import BlogPostLayout from '../layouts/BlogPostLayout.astro';
 import { getCollection } from 'astro:content';
 
 const pageTitle: string = 'coriixyz | blog';
 const allPosts = await getCollection('blog');
+
 ---
 
 <BaseLayout pageTitle={pageTitle}>

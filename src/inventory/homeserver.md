@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/InventoryItemLayout.astro
 title: 'OptiPlex 5050 - Home Server'
-itemDate: 2023-07-01
+postDate: 2023-07-01
 description: 'My unRAID based home server / NAS solution.'
 image:
     url: '../../src/images/5050.png' 

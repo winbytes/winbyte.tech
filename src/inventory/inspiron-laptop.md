@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/InventoryItemLayout.astro
 title: 'Dell Inspiron 16 Plus 7630 2-in-1'
-itemDate: 2025-02-25
+postDate: 2025-02-25
 description: 'My main laptop.'
 image:
     url: '../../src/images/7630.png' 

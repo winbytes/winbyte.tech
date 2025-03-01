@@ -1,19 +1,30 @@
 ---
 import { getCollection, render } from 'astro:content';
 import BlogPostLayout from '../../layouts/BlogPostLayout.astro';
-
+import InventoryItemLayout from '../../layouts/InventoryItemLayout.astro';
 
 export async function getStaticPaths() {
-	const allPosts = await getCollection('blog');
-	return allPosts.map(post => ({
-		params: { slug: post.id }, props: { post },
-	}));
+  const allBlogPosts = await getCollection('blog');
+  const allInventoryPosts = await getCollection('inventory');
+
+  const blogPaths = allBlogPosts.map(post => ({
+    params: { slug: post.id },
+    props: { post, collection: 'blog' },
+  }));
+
+  const inventoryPaths = allInventoryPosts.map(post => ({
+    params: { slug: post.id },
+    props: { post, collection: 'inventory' },
+  }));
+
+  return [...blogPaths, ...inventoryPaths];
 }
 
-const { post } = Astro.props;
+const { post, collection } = Astro.props;
 const { Content } = await render(post);
+const Layout = collection === 'blog' ? BlogPostLayout : InventoryItemLayout;
 ---
 
-<BlogPostLayout frontmatter={post.data}>
-	<Content />
-</BlogPostLayout>
+<Layout frontmatter={post.data}>
+  <Content />
+</Layout>

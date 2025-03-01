@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/InventoryItemLayout.astro
 title: 'OnePlus 12R - Daily Driver'
-itemDate: 2025-02-27
+postDate: 2025-02-27
 description: 'My main cell phone.'
 image:
     url: '../../src/images/12r.png' 

@@ -14,4 +14,17 @@ const blog = defineCollection({
 	})
 });
 
-export const collections = {blog};
+const inventory = defineCollection({
+	loader: glob({pattern: '**/[^_]*.md', base: './src/inventory'}),
+	schema: z.object({
+		title: z.string(),
+		postDate: z.date(),
+		description: z.string(),
+		image: z.object({
+			url: z.string(),
+			alt: z.string(),
+		}),
+	})
+});
+
+export const collections = {blog, inventory};

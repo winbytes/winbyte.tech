@@ -1,9 +1,11 @@
 ---
+import '../styles/global.css';
 import BaseLayout from "../layouts/BaseLayout.astro";
-let allItems = await Astro.glob("../pages/inventory/*.md");
-allItems = allItems.sort((a, b) => new Date(b.frontmatter.itemDate).valueOf() - new Date(a.frontmatter.itemDate).valueOf());
+import { getCollection } from 'astro:content';
 
 const pageTitle = "coriixyz | inventory";
+const allPosts = await getCollection('inventory');
+
 ---
 
 <BaseLayout pageTitle={pageTitle}>
@@ -12,23 +14,23 @@ const pageTitle = "coriixyz | inventory";
   </p>
   <section>
     {
-      allItems.map((item) => (
-        <a href={item.url} class="inventory-item">
+      allPosts.map((post) => (
+        <a href={`/posts/${post.id}`} class="inventory-item">
           <article>
             {/*
             <img style="float: right;" src={item.frontmatter.image.url} width="225" height="150" alt={item.frontmatter.image.alt} />
             image embed to be implemented
             */}
-            <h2>{item.frontmatter.title}</h2>
+            <h2>{post.data.title}</h2>
             <p class="item-date">
               Date Added:
-              {new Date(item.frontmatter.itemDate).toLocaleDateString("en-US", {
+              {new Date(post.data.postDate).toLocaleDateString("en-US", {
                 month: "long",
                 day: "numeric",
                 year: "numeric",
               })}
             </p>
-            <p class="item-excerpt">{item.frontmatter.description}</p>
+            <p class="item-excerpt">{post.data.description}</p>
           </article>
         </a>
       ))
