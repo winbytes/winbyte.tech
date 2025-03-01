@@ -1,13 +1,63 @@
 ---
-import BasicLayout from "./BaseLayout.astro";
+import BaseLayout from "./BaseLayout.astro";
 const { frontmatter } = Astro.props;
 ---
 
-<BasicLayout pageTitle={frontmatter.title}>
+<BaseLayout pageTitle={frontmatter.title}>
   <p>
-    📅 {frontmatter.postDate.slice(0, 10)}
+    📅 {frontmatter.postDate.toLocaleDateString().slice(0, 10)}
   </p>
   <img src={frontmatter.image.url} width="280" alt={frontmatter.image.alt} />
   <p><em>{frontmatter.description}</em></p>
   <slot />
-</BasicLayout>
+</BaseLayout>
+
+
+<style>
+  .blog-post {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    text-decoration: none;
+  }
+  .blog-post h2 {
+    margin-bottom: 0.5rem;
+    color: #94b3c1;
+    font-family: "nunito",
+      sans-serif;
+    font-weight: 700;
+  }
+  .post-date {
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 650;
+    color: #a0aec0;
+    font-family: "nunito",
+      sans-serif;
+  }
+  .post-excerpt {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #afc6ed;
+    font-family: "nunito",
+      sans-serif;
+  }
+  article {
+    background-color: rgba(0, 0, 0, 0.153);
+    border-radius: 15px;
+    padding: 0.8rem;
+    transition: background-color 0.20s ease-in-out;
+    text-decoration: none;
+  }
+
+  article:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+
+  article a {
+    text-decoration: none;
+  }
+</style>

@@ -1,81 +1,20 @@
 ---
+import '../styles/global.css';
 import BaseLayout from "../layouts/BaseLayout.astro";
-let allPosts = await Astro.glob("../pages/blog/*.md");
-allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.postDate).valueOf() - new Date(a.frontmatter.postDate).valueOf());
+import BlogPost from '../components/BlogPost.astro';
+import { getCollection } from 'astro:content';
 
-const pageTitle = "coriixyz | blog";
+const pageTitle: string = 'coriixyz | blog';
+const allPosts = await getCollection('blog');
 ---
 
 <BaseLayout pageTitle={pageTitle}>
   <p>
     I may use this from time to time to post about things I find interesting!
   </p>
-  <section>
-    {
-      allPosts.map((post) => (
-        <a href={post.url} class="blog-post">
-          <article>
-            <h2>{post.frontmatter.title}</h2>
-            <p class="post-date">
-              {new Date(post.frontmatter.postDate).toLocaleDateString("en-US", {
-                month: "long",
-                day: "numeric",
-                year: "numeric",
-              })}
-            </p>
-            <p class="post-excerpt">{post.frontmatter.description}</p>
-          </article>
-        </a>
-      ))
-    }
-  </section>
+  <ul>
+    {allPosts.map((post) => (
+    <BlogPost url={`/posts/${post.id}`} title={post.data.title} />
+    ))
+  </ul>
 </BaseLayout>
-
-<style>
-  .blog-post {
-    margin-bottom: 2rem;
-    padding: 1rem;
-    text-decoration: none;
-  }
-  .blog-post h2 {
-    margin-bottom: 0.5rem;
-    color: #94b3c1;
-    font-family: "nunito",
-      sans-serif;
-    font-weight: 700;
-  }
-  .post-date {
-    margin-bottom: 0.5rem;
-    font-size: 0.875rem;
-    font-weight: 650;
-    color: #a0aec0;
-    font-family: "nunito",
-      sans-serif;
-  }
-  .post-excerpt {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #afc6ed;
-    font-family: "nunito",
-      sans-serif;
-  }
-  article {
-    background-color: rgba(0, 0, 0, 0.153);
-    border-radius: 15px;
-    padding: 0.8rem;
-    transition: background-color 0.20s ease-in-out;
-    text-decoration: none;
-  }
-
-  article:hover {
-    background-color: rgba(0, 0, 0, 0.05);
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: none;
-  }
-
-  article a {
-    text-decoration: none;
-  }
-</style>
