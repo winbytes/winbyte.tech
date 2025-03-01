@@ -12,9 +12,72 @@ const allPosts = await getCollection('blog');
   <p>
     I may use this from time to time to post about things I find interesting!
   </p>
-  <ul>
-    {allPosts.map((post) => (
-    <BlogPost url={`/posts/${post.id}`} title={post.data.title} />
-    ))
-  </ul>
+  <section>
+    {
+      allPosts.map((post) => (
+        <a href={`/posts/${post.id}`} class="blog-post">
+          <article>
+            <h2>{post.data.title}</h2>
+            <p class="post-date">
+              {new Date(post.data.postDate).toLocaleDateString("en-US", {
+                month: "long",
+                day: "numeric",
+                year: "numeric",
+              })}
+            </p>
+            <p class="post-excerpt">{post.data.description}</p>
+          </article>
+        </a>
+      ))
+    }
+  </section>
 </BaseLayout>
+
+<style>
+  .blog-post {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    text-decoration: none;
+  }
+  .blog-post h2 {
+    margin-bottom: 0.5rem;
+    color: #94b3c1;
+    font-family: "nunito",
+      sans-serif;
+    font-weight: 700;
+  }
+  .post-date {
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 650;
+    color: #a0aec0;
+    font-family: "nunito",
+      sans-serif;
+  }
+  .post-excerpt {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #afc6ed;
+    font-family: "nunito",
+      sans-serif;
+  }
+  article {
+    background-color: rgba(0, 0, 0, 0.153);
+    border-radius: 15px;
+    padding: 0.8rem;
+    transition: background-color 0.20s ease-in-out;
+    text-decoration: none;
+  }
+
+  article:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+
+  article a {
+    text-decoration: none;
+  }
+</style>
