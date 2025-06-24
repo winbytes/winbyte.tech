@@ -1,4 +1,4 @@
-# corii.xyz
+# winbyte.tech
 
 My personal website, built with Astro and Tailwind CSS.
 
