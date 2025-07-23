@@ -4,7 +4,7 @@ title: 'OptiPlex 5050 - Home Server'
 postDate: 2023-07-01
 description: 'My unRAID based home server / NAS solution.'
 image:
-    url: '../../src/images/5050.png' 
+    url: '/images/5050.png' 
     alt: 'Dell OptiPlex 5050'
 ---
 ____________________________________________________________________________________________

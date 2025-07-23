@@ -4,7 +4,7 @@ title: 'OnePlus 12R - Daily Driver'
 postDate: 2025-02-27
 description: 'My main cell phone.'
 image:
-    url: '../../src/images/12r.png' 
+    url: '/images/12r.png' 
     alt: ''
 ---
 ____________________________________________________________________________________________
