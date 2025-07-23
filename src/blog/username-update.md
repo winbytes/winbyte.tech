@@ -7,7 +7,7 @@ image:
     alt: 'Mashiro Shiina looking confused'
 ---
 ____________________________________________________________________________________________
-Hello, hope everyone reading this is doing well! I am updating my username from "coriixyz" to "winbyte" or "xwinbyte" on most platforms.
+Hello, hope everyone reading this is doing well! I am updating my username to "winbyte" or "xwinbyte" on most platforms.
 
 I am doing so as I wish to separate my name as an individual from my username on the internet. This is mainly for personal reasons I would prefer not to delve into.
 
