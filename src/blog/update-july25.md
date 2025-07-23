@@ -3,22 +3,29 @@ title: 'a little update'
 postDate: 2025-07-22
 description: "what's the dealio??"
 image:
-    url: 'https://media.tenor.com/vwNaJLW6AfYAAAAC/sakurasou-mashiro.gif' 
-    alt: 'Mashiro Shiina looking confused'
+    url: '' 
+    alt: ''
 ---
 ____________________________________________________________________________________________
-Hello, hope everyone reading this is doing well! I am updating my username to "winbyte" or "xwinbyte" on most platforms.
+woah happy 2025... a little late ahhhh
 
-I am doing so as I wish to separate my name as an individual from my username on the internet. This is mainly for personal reasons I would prefer not to delve into.
+hi to anyone who reads these for some reason.. i'm alive!! cleaning up this site a bit but it's temporary.
+want to start fresh and go a different route with the whole website thing,, bear with me! it's been a long time since i've put any amount of effort into this thing aside from fixing things that get deprecated over time...
 
-Over the coming days, most platforms will reflect the name change. I have updated the links on this page, and will continue to do so as I get to them.
+i've kinda been in a not so fun state the past year or two and having something to focus on besides work would definitely
+help haha.
 
-This new name has been the name of my YouTube channel for quite a while. It acts as a successor to the "WindowsWorld" identity, and while 
-I considered using this name again, it refers more to a community, rather than a person (even if I did use the name as my username for quite a while).
-Plus, the name was copied from another individual anyways, and I would prefer to at least use a name I came up with. 
-
-You can still refer to me as Cori, as that is still the name I wish to go by. The username change is purely for said personal reasons. 
-
-Thanks for your understanding,
-
-coriwaaaaaa :3
+hope everyone is doing well and is staying safe.. love y'all <3
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+read if cute :3
