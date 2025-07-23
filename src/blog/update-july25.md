@@ -3,8 +3,8 @@ title: 'a little update'
 postDate: 2025-07-22
 description: "what's the dealio??"
 image:
-    url: '' 
-    alt: ''
+    url: '/images/meow.jpg' 
+    alt: "cat meme that says - if im lying why aren't my pants on fire? case closed. im innocent."
 ---
 ____________________________________________________________________________________________
 woah happy 2025... a little late ahhhh
