@@ -7,8 +7,8 @@ const { frontmatter } = Astro.props;
   <p>
     📅 {frontmatter.postDate.toLocaleDateString().slice(0, 10)}
   </p>
-  {frontmatter.image && <img src={frontmatter.image.url} width="280" alt={frontmatter.image.alt} />}
-  <p><em>{frontmatter.description}</em></p>
+  {frontmatter.image && frontmatter.image.url && <img src={frontmatter.image.url} width="280" alt={frontmatter.image.alt} />}
+  <p style={frontmatter.image ? {} : { marginTop: "1em" }}><em>{frontmatter.description}</em></p>
   <slot />
 </BaseLayout>
 
