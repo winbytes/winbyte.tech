@@ -22,3 +22,4 @@ package-lock.json
 
 # vscode files
 .vscode/
+*.code-workspace
