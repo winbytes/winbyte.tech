@@ -1,13 +1,13 @@
 ---
-import BasicLayout from "./BaseLayout.astro";
+import BaseLayout from "./BaseLayout.astro";
 const { frontmatter } = Astro.props;
 ---
 
-<BasicLayout pageTitle={frontmatter.title}>
+<BaseLayout pageTitle={frontmatter.title}>
   <p>
     📅 Date Added: {frontmatter.postDate.toLocaleDateString().slice(0, 10)}
   </p>
   {frontmatter.image && frontmatter.image.url && <img src={frontmatter.image.url} width="280" alt={frontmatter.image.alt} />}
   <p><em>{frontmatter.description}</em></p>
   <slot />
-</BasicLayout>
+</BaseLayout>
