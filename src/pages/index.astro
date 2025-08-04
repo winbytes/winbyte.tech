@@ -1,19 +1,29 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-const pageTitle = "winbyte | home";
+const pageTitle = "winbyte";
+const hobbies = [
+  "experiment with computer hardware & software",
+  "work on my own car and nerd out to other people's",
+  "blast music in my ears 24/7 (i probably have hearing loss)",
+  "dabble in a bit of gaming",
+  "endlessly look for the right youtube video to watch",
+];
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  
-  <p>
-    Welcome to my page. I'm Cori
-    <span class="bg-gradient-to-r from-purple-500 to-blue-200 bg-clip-text text-transparent">(22)</span>,
-    and I'm an IT graduate and technology hobbyist from the eastern US. 
-    This site contains a little information about me as well as some contact methods, feel free to take a look!
-  </p>
-  <h2></h2>
-  <p>Visit me on these platforms:</p>
-  <ul>
+  <body>
+    <h2>whoami</h2>
+    <p>
+      hello hello!! my name is <u>cori</u> and i'm a 22 year old IT graduate from the eastern united states
+    </p>
+    <h2>things i do!</h2><p></p>
+      <ul>
+        {hobbies.map((hobbies) => <li class="hobby">{hobbies}</li>)}
+      </ul>
+    <h2>contact me!</h2>
+    </ul>
+
+        <ul>
     <li>GitHub:
       <a href="https://github.com/winbytes">winbytes</a>
     </li>
@@ -28,9 +38,12 @@ const pageTitle = "winbyte | home";
       <a href="https://youtube.com/@winbyte/">winbyte</a>
     </li>
 <!--<li>Bluesky:
-      <a href="https://bsky.app/profile/corii.me">corii.me</a>
+      <a href="https://bsky.app/profile/winbyte.tech">winbyte.tech</a>
     </li>
   -->
+    <li>Email: 
+      <a href="mailto:mail@winbyte.tech">mail@winbyte.tech</a>
+    </li>
   </ul>
-
+  </body>
 </BaseLayout>
