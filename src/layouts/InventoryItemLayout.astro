@@ -1,13 +1,19 @@
 ---
+import { Image } from 'astro:assets';
 import BaseLayout from "./BaseLayout.astro";
 const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
+  <h1>{frontmatter.title}</h1>
   <p>
     📅 Date Added: {frontmatter.postDate.toLocaleDateString().slice(0, 10)}
   </p>
-  {frontmatter.image && frontmatter.image.url && <img src={frontmatter.image.url} width="280" alt={frontmatter.image.alt} />}
+  {frontmatter.image && frontmatter.image.url && (
+    <div style="float: right; width: 25%; margin: 10px 0 10px 20px; border: 1px solid #808080; padding: 5px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); border-radius: 8px;">
+      <Image src={frontmatter.image.url} width={450} height={530} alt={frontmatter.image.alt} style="width: 100%; height: auto; border-radius: 6px; display: block;" />
+    </div>
+  )}
   <p><em>{frontmatter.description}</em></p>
   <slot />
 </BaseLayout>

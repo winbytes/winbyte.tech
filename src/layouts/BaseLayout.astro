@@ -10,7 +10,7 @@ const { pageTitle } = Astro.props;
   <head>
     <meta charset="utf-8" />
     <meta
-      name="winbyte"
+      name="description"
       content="Welcome to my page!! I am Cori, an IT graduate and technology hobbyist from the
       eastern US. This site contains a little information about me as well as some contact methods."
     />
@@ -21,12 +21,20 @@ const { pageTitle } = Astro.props;
   </head>
   <body>
     <Header />
-    <h1>{pageTitle}</h1>
     <slot />
     <Footer />
     <script>
-      document.querySelector('.hamburger').addEventListener('click', () => {
-        document.querySelector('.nav-links').classList.toggle('expanded');
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.nav-links');
+
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('expanded');
+      });
+
+      hamburger.addEventListener('keydown', (e) => {
+        if (e.key === ' ' || e.key === 'Enter') {
+          navLinks.classList.toggle('expanded');
+        }
       });
     </script>
   </body>

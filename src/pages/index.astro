@@ -11,39 +11,36 @@ const hobbies = [
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <body>
-    <h2>whoami</h2>
-    <p>
-      hello hello!! my name is <u>cori</u> and i'm a 22 year old IT graduate from the eastern united states
-    </p>
-    <h2>things i do!</h2><p></p>
-      <ul>
-        {hobbies.map((hobbies) => <li class="hobby">{hobbies}</li>)}
-      </ul>
-    <h2>contact me!</h2>
+  <h1>{pageTitle}</h1>
+  <h2>whoami</h2>
+  <p>
+    hello hello!! my name is <u>cori</u> and i'm a 22 year old IT graduate from the eastern united states
+  </p>
+  <h2>things i do!</h2>
+    <ul>
+      {hobbies.map((hobbies) => <li class="hobby">{hobbies}</li>)}
     </ul>
-
-        <ul>
-    <li>GitHub:
-      <a href="https://github.com/winbytes">winbytes</a>
-    </li>
-    <li>Discord: 
-      <a title="*this link may not work if I am not added as a friend!" href="https://discord.com/users/337795524445077504"
-        >winbyte</a>
-    </li>
-    <li>Twitter: 
-      <a href="https://twitter.com/winbytes">winbytes</a>
-    </li>
-    <li>YouTube:
-      <a href="https://youtube.com/@winbyte/">winbyte</a>
-    </li>
+  <h2>contact me!</h2>
+      <ul>
+  <li>GitHub:
+    <a href="https://github.com/winbytes">winbytes</a>
+  </li>
+  <li>Discord: 
+    <a title="*this link may not work if I am not added as a friend!" href="https://discord.com/users/337795524445077504"
+      >winbyte</a>
+  </li>
+  <li>Twitter: 
+    <a href="https://twitter.com/winbytes">winbytes</a>
+  </li>
+  <li>YouTube:
+    <a href="https://youtube.com/@winbyte/">winbyte</a>
+  </li>
 <!--<li>Bluesky:
-      <a href="https://bsky.app/profile/winbyte.tech">winbyte.tech</a>
-    </li>
-  -->
-    <li>Email: 
-      <a href="mailto:mail@winbyte.tech">mail@winbyte.tech</a>
-    </li>
-  </ul>
-  </body>
+    <a href="https://bsky.app/profile/winbyte.tech">winbyte.tech</a>
+  </li>
+-->
+  <li>Email: 
+    <a href="mailto:mail@winbyte.tech">mail@winbyte.tech</a>
+  </li>
+</ul>
 </BaseLayout>
