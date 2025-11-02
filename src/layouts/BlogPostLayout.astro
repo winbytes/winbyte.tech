@@ -7,7 +7,7 @@ const { frontmatter } = Astro.props;
 <BaseLayout pageTitle={frontmatter.title}>
   <h1>{frontmatter.title}</h1>
   <p>
-    📅 {frontmatter.postDate.toLocaleDateString().slice(0, 10)}
+    📅 Posted on: {frontmatter.postDate.toLocaleDateString().slice(0, 10)}
   </p>
   {frontmatter.image && frontmatter.image.url && (
     <div style="float: right; width: 25%; margin: 10px 0 10px 20px; border: 1px solid #808080; padding: 5px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); border-radius: 8px;">
