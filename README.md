@@ -1,26 +1,57 @@
-# winbyte.tech
+# 🌐 winbyte.tech
 
-My personal website, built with Astro and Tailwind CSS.
+[![License: Zlib](https://img.shields.io/badge/license-Zlib-blue.svg)](./LICENSE)
+[![Last Commit](https://img.shields.io/github/last-commit/winbytes/winbyte.tech)](https://github.com/winbytes/winbyte.tech/commits/main)
+[![Repo Size](https://img.shields.io/github/repo-size/winbytes/winbyte.tech)](https://github.com/winbytes/winbyte.tech)
 
+Source code for [winbyte.tech](https://winbyte.tech) — my personal website built with **Astro** and styled using **Tailwind CSS**. Support for desktop and mobile.
+
+---
+
+## Getting Started
 
 ### Prerequisites
 
-To build this project, you need:
-- [node.js](https://nodejs.org/en/download)
+Make sure you have the following installed:
 
-### Build + Run
+- [Node.js](https://nodejs.org/) (v18 or later recommended)
+- npm (included with Node.js)
 
-Install dependencies: 
+### Installation
 
-    npm i
+```bash
+git clone https://github.com/winbytes/winbyte.tech.git
+cd winbyte.tech
+npm i
+```
 
-Run:
+### Development
 
-    npm run dev
+```bash
+npm run dev
+```
 
-## Built With
+### Build
 
-  - [Astro](https://astro.build/)
-  - [Tailwind CSS](https://tailwindcss.com/)
+```bash
+npm run build
+```
 
-© 2023-2025 winbyte
+---
+
+## Stack
+
+| Tool         | Purpose                      |
+|--------------|------------------------------|
+| Astro        | Static site generator        |
+| Tailwind CSS | CSS framework                |
+| TypeScript   | Optional static typing       |
+| ESLint       | Code linting and formatting  |
+
+## License
+
+This project is licensed under the [Zlib License](./LICENSE).
+
+## Support
+
+If you like this project, give it a ⭐️!
